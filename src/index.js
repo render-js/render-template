@@ -1,4 +1,3 @@
-import one from "./taglib/one";
-import two from "./taglib/test/two";
+import one from "./taglib/render";
 
-export default [one,two]
+export default [one]

@@ -1,18 +1,24 @@
-import {init_status} from "muyomu-render-status";
-import {RenderJS} from "muyomu-render";
 import index from './src/index'
+import {RenderJS} from "render-core";
+import router from "./runtime/router";
+import {init_status} from "render-status";
 
-let app = new RenderJS();
+function main(){
+    //配置会话环境
+    init_status({
+        type: "session",
+        fields:{
+            theme: "default"
+        }
+    })
 
-init_status({
-    type: "session",
-    fields:{
-        name: "mutian",
-        age: 23,
-        sex: "male"
-    }
-})
+    let app = new RenderJS();
 
-app.addTag(index)
+    app.addTag(index)
 
-app.run()
+    app.addRouter(router)
+
+    app.run()
+}
+
+window.onload = main;
