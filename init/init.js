@@ -2,6 +2,7 @@ const glob = require("glob")
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const os = require("os");
+const CopyPlugin = require("copy-webpack-plugin");
 
 function getTemplateArray(pattern){
     let template = [];
@@ -20,6 +21,18 @@ function getTemplateArray(pattern){
         }))
     }
 
+    template.push(new CopyPlugin({
+        patterns:[
+            {
+                from: "public/css",
+                to: "css"
+            },
+            {
+                from: "public/img",
+                to: "img"
+            }
+        ]
+    }))
     return template;
 }
 

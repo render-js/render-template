@@ -1,4 +1,5 @@
 const {getTemplateArray} = require("./init/init");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: __dirname+"/main.js",

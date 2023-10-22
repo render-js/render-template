@@ -2,3 +2,7 @@ body{
     margin: 0 auto;
     background-color: ghostwhite;
 }
+
+render{
+    visibility: hidden;
+}
