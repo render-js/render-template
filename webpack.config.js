@@ -13,6 +13,10 @@ module.exports = {
             {
                 test: /\.html$/i,
                 use: 'raw-loader',
+            },
+            {
+                test: /\.txt$/i,
+                use: 'raw-loader',
             }
         ]
     },

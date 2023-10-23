@@ -1,8 +1,21 @@
 <template>
   <view>
-      <li @txt="label"></li>
+      <li @txt="label" @on:click="redirect"></li>
   </view>
   <style theme="default">
-
+      li[cpn=MMenuItem]{
+          list-style: none;
+          width: 240px;
+          height: 64px;
+          text-align: center;
+          line-height: 64px;
+          vertical-align: middle;
+          transition: background-color 0.5s;
+          font-family: Microsoft YaHei UI 新宋体;
+      }
+      li[cpn=MMenuItem]:hover{
+          background-color: aquamarine;
+          cursor: pointer;
+      }
   </style>
 </template>

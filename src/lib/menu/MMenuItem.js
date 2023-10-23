@@ -1,13 +1,18 @@
 import {Component} from "render-core/class/component/component";
-import template from "./MenuItem.html";
+import template from "./MMenuItem.html";
 
 export default new Component({
-    name: "MenuItem",
+    name: "MMenuItem",
     template: template,
-    props:["label"],
+    props:["label","url"],
     mode: "insert",
     data:{
         label:""
+    },
+    methods:{
+        redirect(){
+            appSite.redirect(this.$props.get("url"),{})
+        }
     },
     beforeRender(){
         this.label = this.$props.get("label")

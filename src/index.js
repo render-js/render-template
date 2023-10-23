@@ -1,9 +1,9 @@
-import one from "./taglib/render";
-import array from "./taglib/array";
-import map from "./taglib/map";
+import menu from "./lib/menu/MMenu";
+import menuItem from "./lib/menu/MMenuItem";
+import MContent from "./lib/input/MContent";
 
 export default function (app){
-    app.addTag(one);
-    app.addTag(array);
-    app.addTag(map);
+    app.addTag(menu);
+    app.addTag(menuItem);
+    app.addTag(MContent);
 }

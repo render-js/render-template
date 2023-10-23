@@ -1,7 +1,9 @@
 import {Component} from "render-core/class/component/component";
-import template from "./Menu.html";
+import template from "./MMenu.html";
+import boxStyle from "./MMenu.txt";
 
 export default new Component({
-    name: "Menu",
-    template: template
+    name: "MMenu",
+    template: template,
+    boxStyle: boxStyle
 })
