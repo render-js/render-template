@@ -4,10 +4,15 @@ import template from "./MContent.html";
 export default new Component({
     name: "MContent",
     template: template,
+    data:{
+        name:"liuzhang"
+    },
     methods: {
-        test(){
-            let kk = this.$commit("getId","hello")
-            console.log(kk)
+        test(data){
+            return "hello";
+        },
+        show(){
+            hello()
         }
     }
 })

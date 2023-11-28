@@ -1,13 +1,14 @@
-import index from './src/index'
-import {RenderJS} from "render-core";
+import index from './plugin'
+import {registerElements, RenderJS} from "render-core";
 
-function main(){
-
+registerElements("onload",function (){
     let app = new RenderJS();
 
     app.use(index)
 
     app.run()
-}
+})
 
-window.onload = main;
+registerElements("hello",function (){
+    alert("hello world")
+})

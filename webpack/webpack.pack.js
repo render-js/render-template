@@ -1,10 +1,9 @@
-const {getTemplateArray} = require("./init/init");
-const CopyPlugin = require("copy-webpack-plugin");
+const {getTemplateArray} = require("./init");
 
 module.exports = {
-    entry: __dirname+"/main.js",
+    entry: __dirname+"/.."+"/main.js",
     output:{
-        path:__dirname+"/dist",
+        path:__dirname+"/pack",
         filename:'script/[name].js'
     },
     mode: 'development',
@@ -12,10 +11,6 @@ module.exports = {
         rules: [
             {
                 test: /\.html$/i,
-                use: 'raw-loader',
-            },
-            {
-                test: /\.txt$/i,
                 use: 'raw-loader',
             }
         ]
