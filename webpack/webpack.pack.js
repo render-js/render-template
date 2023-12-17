@@ -3,7 +3,7 @@ const {getTemplateArray} = require("./init");
 module.exports = {
     entry: __dirname+"/.."+"/main.js",
     output:{
-        path:__dirname+"/pack",
+        path:__dirname+"/../pack",
         filename:'script/[name].js'
     },
     mode: 'development',
