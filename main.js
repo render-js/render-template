@@ -8,7 +8,3 @@ registerElements("onload",function (){
 
     app.run()
 })
-
-registerElements("hello",function (){
-    alert("hello world")
-})
