@@ -1,10 +1,10 @@
-import index from './plugin'
-import {registerElements, RenderJS} from "render-core";
+import {registerElement,RenderJS} from "render-core";
+import {RenderCSS} from "render-ccs";
 
-registerElements("onload",function (){
+registerElement("onload",function (){
     let app = new RenderJS();
 
-    app.use(index)
+    app.use(new RenderCSS())
 
     app.run()
 })
