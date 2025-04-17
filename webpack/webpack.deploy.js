@@ -12,7 +12,11 @@ module.exports = {
             {
                 test: /\.html$/i,
                 use: 'raw-loader',
+            },{
+                test: /\.ts$/,
+                use: 'ts-loader',
             }
+
         ]
     },
     optimization: {

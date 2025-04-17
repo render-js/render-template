@@ -1,10 +1,16 @@
-import {registerElement,RenderJS} from "render-core";
+import {RenderJS} from "render-core";
 import {RenderCSS} from "render-ccs";
+import {MyPlugin} from "./plugin/myPlugin";
 
-registerElement("onload",function (){
+RenderJS.registerElement("onload",function (){
+
     let app = new RenderJS();
 
-    app.use(new RenderCSS())
+    app.setConfig("deepReact",false);
 
-    app.run()
+    app.use(new MyPlugin());
+
+    app.use(new RenderCSS());
+
+    app.run();
 })

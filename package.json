@@ -11,13 +11,15 @@
     "glob": "^8.1.0",
     "html-webpack-plugin": "^5.5.0",
     "raw-loader": "^4.0.2",
+    "ts-loader": "^9.5.2",
     "webpack": "^5.99.5",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.15.1",
     "webpack-parallel-uglify-plugin": "^2.0.0"
   },
   "dependencies": {
-    "render-ccs": "^0.0.1",
-    "render-core": "1.3.67"
+    "render-ccs": "file:../render-ccs",
+    "render-core": "file:../render-core/dist",
+    "render-refer": "file:../render-refer/dist"
   }
 }
