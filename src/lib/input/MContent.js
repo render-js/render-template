@@ -1,9 +1,12 @@
-import {Component} from "render-core/class/component/component";
 import template from "./MContent.html";
+import {Component} from "render-core"
 
 export default new Component({
     name: "MContent",
     template: template,
+    config: {
+        boxMode: true,
+    },
     data:{
         name:"liuzhang"
     },

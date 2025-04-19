@@ -1,16 +1,20 @@
-import {RenderJS} from "render-core";
-import {RenderCSS} from "render-ccs";
-import {MyPlugin} from "./plugin/myPlugin";
+import {RenderJS as RenderJs} from "../render-core/dist";
+import MContent from "./src/lib/input/MContent";
+import {MyPlugin} from "render-router";
 
-RenderJS.registerElement("onload",function (){
+RenderJs.registerElement('onload',function(){
+    let app = new RenderJs();
+    app.routeMode = true;
 
-    let app = new RenderJS();
-
-    app.setConfig("deepReact",false);
-
-    app.use(new MyPlugin());
-
-    app.use(new RenderCSS());
+    app.use_plugin(new MyPlugin({
+        mode: "history",
+        table: [
+            {
+                path: "/",
+                component: MContent
+            }
+        ]
+    }))
 
     app.run();
 })
