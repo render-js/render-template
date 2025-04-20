@@ -1,8 +1,19 @@
 <template>
   <view>
     <button type="button" @on:click="show">click me</button>
+    <div @txt="name"></div>
+    <div @map="test">
+      <div @section="name"></div>
+      <div @section="sex"></div>
+      <div @section="age"></div>
+      <div @map-list="hd">
+        <div @data></div>
+      </div>
+    </div>
   </view>
   <style theme="default">
-
+    button[cpn=MContent] {
+      background-color: aquamarine;
+    }
   </style>
 </template>

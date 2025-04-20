@@ -1,10 +1,12 @@
-import {Component} from "render-core/class/component/component";
 import template from "./Test.html"
+import {Component} from "render-core";
 
 export default new Component({
     name:"Test",
     template:template,
-    props:["method","data"],
+    config:{
+        boxMode: true
+    },
     data:{
         name:"ok"
     },

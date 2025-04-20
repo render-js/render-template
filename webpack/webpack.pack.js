@@ -3,7 +3,7 @@ const {getTemplateArray} = require("./init");
 module.exports = {
     entry: __dirname+"/.."+"/main.js",
     output:{
-        path:__dirname+"/../pack",
+        path:"/opt/homebrew/var/www",
         filename:'script/[name].js'
     },
     mode: 'development',
@@ -12,10 +12,6 @@ module.exports = {
             {
                 test: /\.html$/i,
                 use: 'raw-loader',
-            },
-            {
-                test: /\.ts$/,
-                use: 'ts-loader',
             }
         ]
     },
@@ -25,7 +21,6 @@ module.exports = {
         port: 9090
     },
     watchOptions: {
-        aggregateTimeout: 200,
-        ignored: "/node_modules"
+        aggregateTimeout: 200
     }
 }

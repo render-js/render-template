@@ -18,7 +18,7 @@
     "webpack-parallel-uglify-plugin": "^2.0.0"
   },
   "dependencies": {
-    "render-core": "^1.4.1",
-    "render-router": "^1.0.1"
+    "render-core": "1.4.13",
+    "render-router": "^1.0.8"
   }
 }

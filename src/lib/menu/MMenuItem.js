@@ -1,5 +1,5 @@
-import {Component} from "render-core/class/component/component";
 import template from "./MMenuItem.html";
+import {Component} from "render-core";
 
 export default new Component({
     name: "MMenuItem",
